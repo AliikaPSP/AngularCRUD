@@ -15,7 +15,8 @@ export class DeleteComponent {
   constructor(private router: ActivatedRoute,
     private route: Router,
     private creditcardsService: CreditcardsService) {
-    this.creditCardId = parseInt(this.router.snapshot.paramMap.get("id") || '');
+    this.creditCardId = parseInt(this.router.snapshot.paramMap.get("id") || ''
+    );
 
     // Delete Functionality
     this.creditcardsService.deleteCreditCard(this.creditCardId).subscribe(data => {
